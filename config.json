@@ -1,0 +1,9 @@
+{
+    "token": "your bot token obtained from botfather",
+    "owner": {
+        "id": "your id",
+        "username": "your username"
+    },
+    "dburl": "your postgres database url. make one if you dont have one",
+    "log": "channel id of your logging channel"
+}

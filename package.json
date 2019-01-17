@@ -1,0 +1,30 @@
+{
+  "name": "telegram-personal-bot",
+  "version": "1.0.0",
+  "description": "A telegram bot to assist the user everyday from pinning messages to making automated messages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eegad/telegram-personal-bot.git"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "node"
+  ],
+  "author": "eegad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eegad/telegram-personal-bot/issues"
+  },
+  "homepage": "https://github.com/eegad/telegram-personal-bot#readme",
+  "dependencies": {
+    "pg": "^7.8.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.42.0",
+    "telegram-bot-api": "^1.3.1"
+  }
+}
