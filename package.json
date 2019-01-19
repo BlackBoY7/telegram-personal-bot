@@ -4,7 +4,7 @@
   "description": "A telegram bot to assist the user everyday from pinning messages to making automated messages",
   "main": "bot.js",
   "scripts": {
-    "bot": "node bot.js"
+    "start": "node bot.js"
   },
   "repository": {
     "type": "git",
