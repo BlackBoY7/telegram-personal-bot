@@ -8,7 +8,7 @@ var notes = sequelize.define('notes', {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true
-	},
+    },
     title: {
         type: Sequelize.STRING,
 	    allowNull: false
