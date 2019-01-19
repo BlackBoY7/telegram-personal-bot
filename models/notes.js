@@ -3,7 +3,7 @@ const sequelize = require('../utils/database');
 
 //create notes model
 var notes = sequelize.define('notes', {
-	id: {
+    id: {
 	type: Sequelize.INTEGER,
         allowNull: false,
         autoIncrement: true,
