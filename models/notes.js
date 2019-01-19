@@ -4,7 +4,7 @@ const sequelize = require('../utils/database');
 //create notes model
 var notes = sequelize.define('notes', {
 	id: {
-		type: Sequelize.INTEGER,
+	type: Sequelize.INTEGER,
         allowNull: false,
         autoIncrement: true,
         primaryKey: true
