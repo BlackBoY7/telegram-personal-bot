@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "A telegram bot to assist the user everyday from pinning messages to making automated messages",
   "main": "bot.js",
-  "private": true,
   "scripts": {
     "start": "node bot.js"
   },
@@ -26,6 +25,6 @@
     "node-telegram-bot-api": "^0.30.0",
     "pg": "^7.8.0",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^4.42.0",
+    "sequelize": "^4.42.0"
   }
 }
