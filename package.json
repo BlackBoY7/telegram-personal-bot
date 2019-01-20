@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A telegram bot to assist the user everyday from pinning messages to making automated messages",
   "main": "bot.js",
+  "private": true,
   "scripts": {
     "start": "node bot.js"
   },
