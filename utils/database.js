@@ -1,6 +1,6 @@
 //initiate database
-const Sequelize = require('Sequelize');
-const config = require('../config')
+const Sequelize = require('sequelize');
+const config = require('../config');
 const sequelize = new Sequelize(config.dburl);
 
 //export db template

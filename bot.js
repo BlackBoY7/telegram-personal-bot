@@ -3,14 +3,16 @@ const config = require("./config");
 
 //start bot
 const Telegraf = require("telegraf");
-const stage = require("telegraf/stage")
+const stage = require("telegraf/stage");
+const session = require("telegraf/session");
+const wizardScene = require("telegraf/scenes/base");
 const bot = new Telegraf(config.token);
 const sequelize = require("./utils/database");
 
 //start bot
 bot.startPolling();
-bot.use(session())
-bot.use(stage.middleware())
+bot.use(session());
+bot.use(stage.middleware());
 
 //commands
 var cmd1 = "#addnote";
@@ -19,15 +21,15 @@ var cmd1 = "#addnote";
 const notes = require("./models/notes");
 
 //add note scene
-const addNote = new WizardScene('add-note',
+const addNote = new wizardScene('add-note',
     (ctx) => {
 	    ctx.reply("let's add a note!\nTitle of note:");
-		return ctx.wizard.next()
+		return ctx.wizard.next();
     },
     (ctx) => {
 	    Title = ctx.message.text;
-		ctx.reply('Content of Note: ')
-		return ctx.wizard.next()
+		ctx.reply('Content of Note: ');
+		return ctx.wizard.next();
     },
     (ctx) => {
 		Content = ctx.message.text;
@@ -52,7 +54,7 @@ bot.on('text', (ctx) => {
 	}else{
 		bot.hears(cmd1, stage.enter('add-note'));
 	}
-}
+});
 
 //to test database connection
 sequelize.authenticate().then(function (err) {
@@ -60,6 +62,6 @@ sequelize.authenticate().then(function (err) {
         bot.sendMessage(config.owner.id, `Unable to connect to the database: ${err}`);
     }else{
         sequelize.sync();
-        bot.sendMessage(config.owner.id, "Connected to database");
+        bot.telegram.sendMessage(config.owner.id, "Connected to database");
     }
 });
